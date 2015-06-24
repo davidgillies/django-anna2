@@ -367,21 +367,25 @@ class Application(object):
                 data = json_dict
                 data['errors'] = 'errors'
         else:
-            for k in json_dict.keys():
-                    if k in self.db_mapping.keys():
-                        json_dict[self.db_mapping[k]] = json_dict[k]
-                        json_dict.pop(k)
-            validator = Validator(self.validator, json_dict)
-            if validator.is_valid():
-                queryset = QuerySet(table_name=self.get_table_name(section_number))
-                data = queryset.create(json_dict)
+            if 'search' in json_dict.keys():
+                data = self.search(json_dict['search'], section_number)
             else:
-                for k in json_dict.keys():
-                    if k in self.db_mapping.keys():
-                        json_dict[self.db_mapping[k]] = json_dict[k]
-                        json_dict.pop(k)
-                data = json_dict
-                data['errors'] = validator.errors
+                validator = Validator(self.validator, json_dict)
+                print json_dict, self.validator
+                if validator.is_valid():
+                    for k in json_dict.keys():
+                        if k in self.db_mapping.keys():
+                            json_dict[self.db_mapping[k]] = json_dict[k]
+                            json_dict.pop(k)
+                    queryset = QuerySet(table_name=self.get_table_name(section_number))
+                    data = queryset.create(json_dict)
+                else:
+                    for k in json_dict.keys():
+                        if k in self.db_mapping.keys():
+                            json_dict[self.db_mapping[k]] = json_dict[k]
+                            json_dict.pop(k)
+                    data = json_dict
+                    data['errors'] = validator.errors
         return data
 
     def pre_process_keys(self, json_dict):
