@@ -7,7 +7,7 @@ from .forms import VolunteerForm
 #XML_FILE = 'U:/Data/forms_api/forms_api/xmlfiles/Ships.xml'
 XML_FILE = 'U:/Data/forms_api/forms_api/xmlfiles/Fenland.xml'
 
-DATABASE = 'sqlite:///U:\\Data\\bollocks\\fendland_api\\fenland_api\\db.sqlite3'
+DATABASE = 'sqlite:///U:\\Data\\django-anna\\django-anna2\\fenland_api\\db.sqlite3'
 #DATABASE = 'sqlite:///U:\\Data\\fenland_api\\db.sqlite3'
 
 DB_MAPPING = {'surgery': 'surgeries_id', 'surgeries': 'surgeries_id', 'diabetes': 'diabetes_diagnosed'}
@@ -22,7 +22,7 @@ TABLE_MODEL_MAPPING = {'volunteers': Volunteer, 'appointments': Appointment}
 MODEL_LIST = [Volunteer, Appointment]
 
 ####
-MODELS = False
+MODELS = True
 
 MODEL_MAPPING = {0: Volunteer, 1: Volunteer, 2: Volunteer, 3: Volunteer, 4: Volunteer}
 

@@ -357,6 +357,12 @@ class Application(object):
             json_dict = self.pre_process_keys(json_dict)
             validator = self.model_form_mapping[int(section_number)](json_dict)
             if validator.is_valid():
+                for k in json_dict.keys():
+                        if k in self.db_mapping.keys():
+                            json_dict[self.db_mapping[k]] = json_dict[k]
+                            json_dict.pop(k)
+                        if 'id' in json_dict.keys():
+                            json_dict.pop('id')
                 json_dict = self.post_process_keys(json_dict)
                 model = self.model_mapping[int(section_number)].objects.create(**json_dict)
                 data = model_to_dict(model)
@@ -396,6 +402,9 @@ class Application(object):
 
     def update_data(self, section_number, id_variable, id_variable_value,
                     body):
+        if id_variable_value == "None":
+            data = self.insert_data(section_number, id_variable, body)
+            return data
         if self.models:
             json_dict = simplejson.JSONDecoder().decode(body)
             orig_json_dict = json_dict

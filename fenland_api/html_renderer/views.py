@@ -1,7 +1,8 @@
 import json
 from django.views.generic import View
-from django.http import HttpResponseNotFound, HttpResponse
-from django.shortcuts import render
+from django.http import HttpResponseNotFound, HttpResponse, HttpResponseRedirect
+from django.core.urlresolvers import reverse
+from django.shortcuts import render, redirect
 from api_renderer.views import fenland_app
 from api_renderer import local_settings
 if local_settings.CUSTOM is True:
