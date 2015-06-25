@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epi:questionnaire ID="DavidForm1" lang="eng" css="questionnaire.css" xsi:schemaLocation="http://www.mrc-epid.cam.ac.uk/schema/common/epi XSD/questionnaireSchema_010.xsd" xmlns:epi="http://www.mrc-epid.cam.ac.uk/schema/common/epi" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<epi:metadata>
+		<dc:date/>
+		<dc:description/>
+		<dc:identifier/>
+		<dc:publisher/>
+		<dc:title/>
+		<dc:type/>
+		<epi:version/>
+	</epi:metadata>
+	<epi:author>Captain Haddock</epi:author>
+	<epi:studyName>Ships</epi:studyName>
+	<epi:versionNumber>1</epi:versionNumber>
+	<epi:versionDate>06/01/2015</epi:versionDate>
+	<epi:title>Ships</epi:title>
+	<epi:section position="0">
+		<epi:title>Introduction</epi:title>
+		<epi:info cssClass="section_header textalign_center">Ships</epi:info>
+		<epi:info cssClass="new_line"/>
+		<epi:info cssClass="section_textbody">Please press Next and fill in the form.</epi:info>
+	</epi:section>
+	<epi:section ID="A" position="1">
+		<epi:title/>
+		<epi:questionGroup ID="1" position="1">
+			<epi:title/>
+			<epi:renderingHint>
+				<epi:rhType>table</epi:rhType>
+				<epi:rhData>true</epi:rhData>
+			</epi:renderingHint>
+			<epi:renderingHint>
+				<epi:rhType>shownumber</epi:rhType>
+				<epi:rhData>false</epi:rhData>
+			</epi:renderingHint>
+			<epi:textNode position="1">
+				<epi:info cssClass="textnode_textbody">Name: </epi:info>
+				<epi:renderingHint>
+					<epi:rhType>tdclass</epi:rhType>
+					<epi:rhData>textalign_right</epi:rhData>
+				</epi:renderingHint>
+			</epi:textNode>
+			<epi:question ID="Q1" position="2">
+				<epi:variable ID="var1">
+					<epi:varName>name</epi:varName>
+					<epi:dataType>
+						<epi:string>
+							<epi:maxLength>50</epi:maxLength>
+						</epi:string>
+					</epi:dataType>
+				</epi:variable>
+				<epi:renderingHint>
+					<epi:rhType>qtype</epi:rhType>
+					<epi:rhData>text</epi:rhData>
+				</epi:renderingHint>
+				<epi:renderingHint>
+					<epi:rhType>size</epi:rhType>
+					<epi:rhData>50</epi:rhData>
+				</epi:renderingHint>
+				<epi:renderingHint>
+					<epi:rhType>endoftr</epi:rhType>
+					<epi:rhData>true</epi:rhData>
+				</epi:renderingHint>
+				<epi:restrictions>
+					<epi:rule name="IsAnswered">
+						<epi:parameter type="string" use="ErrorResponse">Please give an answer</epi:parameter>
+						<epi:parameter type="boolean" use="AllowError">false</epi:parameter>
+					</epi:rule>
+					<epi:rule name="CheckMaxLength">
+						<epi:parameter type="string" use="ErrorResponse">Your answer should be less than 50 characters long</epi:parameter>
+						<epi:parameter type="boolean" use="AllowError">false</epi:parameter>
+					</epi:rule>
+				</epi:restrictions>
+			</epi:question>
+			<epi:textNode position="2">
+				<epi:info cssClass="textnode_textbody">Ship Type: </epi:info>
+				<epi:renderingHint>
+					<epi:rhType>tdclass</epi:rhType>
+					<epi:rhData>textalign_right</epi:rhData>
+				</epi:renderingHint>
+			</epi:textNode>
+			<epi:question ID="Q2" position="3">
+				<epi:variable ID="var2">
+					<epi:varName>ship_type</epi:varName>
+					<epi:dataType>
+						<epi:string>
+							<epi:maxLength>50</epi:maxLength>
+						</epi:string>
+					</epi:dataType>
+				</epi:variable>
+				<epi:renderingHint>
+					<epi:rhType>qtype</epi:rhType>
+					<epi:rhData>text</epi:rhData>
+				</epi:renderingHint>
+				<epi:renderingHint>
+					<epi:rhType>size</epi:rhType>
+					<epi:rhData>50</epi:rhData>
+				</epi:renderingHint>
+				<epi:renderingHint>
+					<epi:rhType>endoftr</epi:rhType>
+					<epi:rhData>true</epi:rhData>
+				</epi:renderingHint>
+				<epi:restrictions>
+					<epi:rule name="IsAnswered">
+						<epi:parameter type="string" use="ErrorResponse">Please give an answer</epi:parameter>
+						<epi:parameter type="boolean" use="AllowError">false</epi:parameter>
+					</epi:rule>
+					<epi:rule name="CheckMaxLength">
+						<epi:parameter type="string" use="ErrorResponse">Your answer should be less than 50 characters long</epi:parameter>
+						<epi:parameter type="boolean" use="AllowError">false</epi:parameter>
+					</epi:rule>
+				</epi:restrictions>
+			</epi:question>
+			<epi:textNode position="4">
+				<epi:info cssClass="textnode_textbody">Drive Type: </epi:info>
+				<epi:renderingHint>
+					<epi:rhType>tdclass</epi:rhType>
+					<epi:rhData>textalign_right</epi:rhData>
+				</epi:renderingHint>
+			</epi:textNode>
+			<epi:question ID="Q3" position="5">
+				<epi:variable ID="var2">
+					<epi:varName>drive_type</epi:varName>
+					<epi:dataType>
+						<epi:string>
+							<epi:maxLength>50</epi:maxLength>
+						</epi:string>
+					</epi:dataType>
+				</epi:variable>
+				<epi:renderingHint>
+					<epi:rhType>qtype</epi:rhType>
+					<epi:rhData>text</epi:rhData>
+				</epi:renderingHint>
+				<epi:renderingHint>
+					<epi:rhType>size</epi:rhType>
+					<epi:rhData>50</epi:rhData>
+				</epi:renderingHint>
+				<epi:renderingHint>
+					<epi:rhType>endoftr</epi:rhType>
+					<epi:rhData>true</epi:rhData>
+				</epi:renderingHint>
+				<epi:restrictions>
+					<epi:rule name="IsAnswered">
+						<epi:parameter type="string" use="ErrorResponse">Please give an answer</epi:parameter>
+						<epi:parameter type="boolean" use="AllowError">false</epi:parameter>
+					</epi:rule>
+					<epi:rule name="CheckMaxLength">
+						<epi:parameter type="string" use="ErrorResponse">Your answer should be less than 50 characters long</epi:parameter>
+						<epi:parameter type="boolean" use="AllowError">false</epi:parameter>
+					</epi:rule>
+				</epi:restrictions>
+			</epi:question>
+			<epi:textNode position="6">
+				<epi:info cssClass="textnode_textbody">Ship Type: </epi:info>
+				<epi:renderingHint>
+					<epi:rhType>tdclass</epi:rhType>
+					<epi:rhData>textalign_right</epi:rhData>
+				</epi:renderingHint>
+			</epi:textNode>
+			<epi:question ID="Q4" position="7">
+				<epi:variable ID="var3">
+					<epi:varName>ship_type</epi:varName>
+				</epi:variable>
+				<epi:option position="0">
+					<epi:optionText>Please select...</epi:optionText>
+					<epi:optionValue>-1</epi:optionValue>
+				</epi:option>
+				<epi:option position="1">
+					<epi:optionText>Navy</epi:optionText>
+					<epi:optionValue>Navy</epi:optionValue>
+				</epi:option>
+				<epi:option position="2">
+					<epi:optionText>Passenger</epi:optionText>
+					<epi:optionValue>Passenger</epi:optionValue>
+				</epi:option>
+				<epi:option position="3">
+					<epi:optionText>Tanker</epi:optionText>
+					<epi:optionValue>Tanker</epi:optionValue>
+				</epi:option>
+				<epi:option position="4">
+					<epi:optionText>Cargo</epi:optionText>
+					<epi:optionValue>Cargo</epi:optionValue>
+				</epi:option>
+				<epi:renderingHint>
+					<epi:rhType>qtype</epi:rhType>
+					<epi:rhData>dropdown</epi:rhData>
+				</epi:renderingHint>
+				<epi:renderingHint>
+					<epi:rhType>endoftr</epi:rhType>
+					<epi:rhData>true</epi:rhData>
+				</epi:renderingHint>
+				<epi:restrictions>
+					<epi:rule name="IsAnswered">
+						<epi:parameter type="string" use="ErrorResponse">Please give an answer</epi:parameter>
+						<epi:parameter type="boolean" use="AllowError">false</epi:parameter>
+					</epi:rule>
+				</epi:restrictions>
+			</epi:question>
+		</epi:questionGroup>
+	</epi:section>
+	
+
+
+	<epi:section position="3">
+		<epi:title/>
+		<epi:info>Please press Submit to save your answers</epi:info>
+	</epi:section>
+	<epi:section position="4">
+		<epi:title/>
+		<epi:info cssClass="textbody">Thank you.</epi:info>
+	</epi:section>
+</epi:questionnaire>
