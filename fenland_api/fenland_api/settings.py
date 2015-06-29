@@ -103,7 +103,7 @@ TEMPLATE_LOADERS = (
     )),
 )
 
-STATIC_ROOT = 'U:/Data2/django-anna2/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
