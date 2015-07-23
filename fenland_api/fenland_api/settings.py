@@ -42,7 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #'django.contrib.flatpages',
-    'debug_toolbar',
+    #'debug_toolbar',
     'rest_framework',
     'django_extensions',
     'questionnaire',
@@ -103,7 +103,7 @@ TEMPLATE_LOADERS = (
     )),
 )
 
-STATIC_ROOT = 'U:/Data/b/fendland-api/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
